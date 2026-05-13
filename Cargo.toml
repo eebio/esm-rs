@@ -1,0 +1,32 @@
+[package]
+name = "esm"
+version = "0.1.0"
+edition = "2024"
+description = "Standardised data format and supporting tools for reproducible data processing in engineering biology"
+license = "MIT"
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = { version = "1", features = ["float_roundtrip"] }
+indexmap = { version = "2", features = ["serde"] }
+csv = "1"
+regex = "1"
+rhai = "1"
+nalgebra = "0.33"
+thiserror = "2"
+log = "0.4"
+env_logger = "0.11"
+levenberg-marquardt = "0.14"
+calamine = "0.26"
+encoding_rs = "0.8"
+clap = { version = "4", features = ["derive"] }
+byteorder = "1"
+plotters = { version = "0.3", default-features = false, features = ["bitmap_backend", "bitmap_encoder", "image", "line_series", "histogram", "datetime", "ttf"] }
+image = { version = "0.25", default-features = false, features = ["png"] }
+printpdf = { version = "0.9", default-features = false, features = ["png"] }
+
+[dev-dependencies]
+approx = "0.5"
+tempfile = "3"
+rand = "0.9"
+rand_distr = "0.5"
